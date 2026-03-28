@@ -1,4 +1,4 @@
-# 🚀 AskMyDocs – AI-Powered RAG Chatbot
+# AskMyDocs – AI-Powered RAG Chatbot
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.10+-blue" />
@@ -10,26 +10,26 @@
 
 ---
 
-## 📌 Overview
+##  Overview
 
 AskMyDocs is an AI-powered chatbot that lets users upload PDFs and ask questions. It uses a **Retrieval-Augmented Generation (RAG)** pipeline with **agent fallback (web search)** and **chat memory** to deliver accurate, context-aware answers.
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
-* 📄 Upload & process PDFs
-* 🔍 Semantic search via embeddings
-* 🤖 Context-grounded LLM answers
-* 🌐 Web search fallback (Agent behavior)
-* 💬 Conversational memory (follow-ups)
-* ⚡ FastAPI backend + Streamlit UI
+*  Upload & process PDFs
+*  Semantic search via embeddings
+*  Context-grounded LLM answers
+*  Web search fallback (Agent behavior)
+*  Conversational memory (follow-ups)
+*  FastAPI backend + Streamlit UI
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
-### 🔄 End-to-End Flow
+###  End-to-End Flow
 
 ```
 PDF → Chunk → Embed → Store (Vector DB)
@@ -42,7 +42,7 @@ if context weak → Web Search
 (Context + History) → LLM → Answer
 ```
 
-### 🧩 Components
+###  Components
 
 ```
 ui/app.py            → Streamlit UI
@@ -56,7 +56,7 @@ app/tools/web_search.py → external search
 
 ---
 
-## 🧠 How It Works
+## How It Works
 
 ### 1) Ingestion
 
@@ -75,17 +75,13 @@ app/tools/web_search.py → external search
 
 ---
 
-## 🤖 Agent Logic
+##  Agent Logic
 
 ```python
-if not context or len(context) < 2:
-    web_results = search_web(question)
-    context = web_results
-```
 
 ---
 
-## 💬 Memory
+##  Memory
 
 * Stores last N turns
 * Appended to prompt for continuity
@@ -93,7 +89,7 @@ if not context or len(context) < 2:
 
 ---
 
-## ⚙️ Tech Stack
+##  Tech Stack
 
 * FastAPI
 * Streamlit
@@ -103,7 +99,7 @@ if not context or len(context) < 2:
 
 ---
 
-## 🔐 Environment Variables
+## Environment Variables
 
 Create a `.env` file:
 
@@ -114,7 +110,7 @@ MODEL_NAME=your_model
 
 ---
 
-## 🛠️ Setup
+##  Setup
 
 ### 1. Clone
 
@@ -159,7 +155,7 @@ POST /upload
 
 ---
 
-## 🧪 Example
+##  Example
 
 **Q:** What is Retrieval-Augmented Generation?
 
@@ -167,23 +163,12 @@ POST /upload
 
 ---
 
-## 🎥 Demo
-
-* Add GIF here (screen recording of upload + ask)
-* Or add Loom/YouTube link
 
 ---
 
-## 📈 Performance Tips
 
-* Reduce `top_k` for faster retrieval
-* Limit prompt/context tokens
-* Cache frequent queries
-* Use async for web + retrieval
 
----
-
-## 🚀 Future Improvements
+## Future Improvements
 
 * Multi-user session memory
 * Multi-PDF filtering via metadata
@@ -193,7 +178,7 @@ POST /upload
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **Arvind Pandey**
 
