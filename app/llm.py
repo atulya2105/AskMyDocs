@@ -53,7 +53,7 @@ def generate_answer(query, context, source=None):
                     """
 
     response = client.chat.completions.create(
-        model="llama-3.1-8b-instant",   # 🔥 fast + free
+        model="llama-3.1-8b-instant",   
         messages=[
             {"role": "user", "content": prompt}
         ],

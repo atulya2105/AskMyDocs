@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+streamlit
+
+pypdf
+
+sentence-transformers
+chromadb
+
+requests
+python-dotenv
+
+groq
